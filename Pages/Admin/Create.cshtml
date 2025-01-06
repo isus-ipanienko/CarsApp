@@ -1,0 +1,15 @@
+@page
+@model CarsApp.Pages.Admin.CreateModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "Utwórz samochód";
+}
+
+<p>Wprowadź dane:</p>
+
+<form method="post">
+    Marka:
+    <input asp-for="Car!.Brand" />
+    <input type="submit" value="Dodaj" />
+</form>
+

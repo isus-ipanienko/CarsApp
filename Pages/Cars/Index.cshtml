@@ -1,0 +1,34 @@
+@page
+@model CarsApp.Pages.Cars.IndexModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "Nasze samochody";
+}
+
+<h1>Nasze samochody</h1>
+<form method="post">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Marka</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model.Cars != null)
+            {
+            foreach (var car in Model.Cars)
+            {
+            <tr>
+                <td> @car.Id </td>
+                <td> @car.Brand </td>
+                <td>
+                    <a asp-page="./Reserve" asp-route-id="@car.Id">Rezerwuj</a>
+                </td>
+            </tr>
+            }
+            }
+        </tbody>
+    </table>
+</form>
