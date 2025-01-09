@@ -8,5 +8,8 @@ namespace CarsApp.Models
 
         [Required, StringLength(20)]
         public string? Brand { get; set; }
+
+        [Required, StringLength(20)]
+        public string? Model { get; set; }
     }
 }

@@ -12,6 +12,7 @@
             <tr>
                 <th>ID</th>
                 <th>Marka</th>
+                <th>Model</th>
                 <th></th>
             </tr>
         </thead>
@@ -23,7 +24,9 @@
             <tr>
                 <td> @car.Id </td>
                 <td> @car.Brand </td>
+                <td> @car.Model </td>
                 <td>
+                    <a asp-page="./Edit" asp-route-id="@car.Id">Edytuj</a>
                     <button type="submit" asp-page-handler="delete" asp-route-id="@car.Id">Usuń</button>
                 </td>
             </tr>
